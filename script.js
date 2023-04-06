@@ -82,15 +82,20 @@ toggles.forEach(toggle => toggle.addEventListener('change', (e) => doTheTrick(e.
 function doTheTrick(theClickedOne) {
     if (muyDificil.checked && dificil.checked && facil.checked) {
         if (muyDificil === theClickedOne) {
-            facil.checked = false
+            facil.checked = false,
+            dificil.checked = false
+
         }
 
         if (dificil === theClickedOne) {
-            muyDificil.checked = false
+            muyDificil.checked = false,
+            facil.checked = false
         }
 
         if (facil === theClickedOne) {
-            dificil.checked = false
+            dificil.checked = false,
+            muyDificil.checked = false
+
         }
     }
 }
